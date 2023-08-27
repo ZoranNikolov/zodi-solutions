@@ -8,13 +8,14 @@ import {
 
 export default function Navigation() {
 	return (
-		<Flex justify={"center"} as={"header"}>
+		<Flex justify={"center"} as={"header"} backgroundColor={"#0d0d0d"} pos={"fixed"} w={"100%"}>
 			<Breadcrumb
 				spacing="8px"
 				separator={<ChevronRightIcon color="gray.500" />}
 				display={"flex"}
 				fontSize={"2xl"}
-				height={100}
+				height={90}
+				color={"#dfe5f3"}
 			>
 				<BreadcrumbItem isCurrentPage>
 					<BreadcrumbLink href="#">Начало</BreadcrumbLink>

@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
 	return (
-		<Box as="footer" py="6" bg="gray.800" color="white">
+		<Box as="footer" py="6" bg="#0d0d0d" color="white">
 			<Flex justify="space-between" align="center" maxW="6xl" mx="auto">
 				<Text>&copy; 2023 Your Company. All rights reserved.</Text>
 				<Flex align="center">
