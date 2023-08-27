@@ -8,21 +8,20 @@ import {
 
 export default function Navigation() {
 	return (
-		<Flex justify={"center"} align={"center"}>
+		<Flex justify={"center"}>
 			<Breadcrumb
 				spacing="8px"
 				separator={<ChevronRightIcon color="gray.500" />}
+				display={"flex"}
+				fontSize={"2xl"}
+				height={100}
 			>
-				<BreadcrumbItem>
-					<BreadcrumbLink href="#">Home</BreadcrumbLink>
-				</BreadcrumbItem>
-
-				<BreadcrumbItem>
-					<BreadcrumbLink href="#">About</BreadcrumbLink>
-				</BreadcrumbItem>
-
 				<BreadcrumbItem isCurrentPage>
-					<BreadcrumbLink href="#">Contact</BreadcrumbLink>
+					<BreadcrumbLink href="#">Начало</BreadcrumbLink>
+				</BreadcrumbItem>
+
+				<BreadcrumbItem>
+					<BreadcrumbLink href="#">Връзка с нас</BreadcrumbLink>
 				</BreadcrumbItem>
 			</Breadcrumb>
 		</Flex>
