@@ -5,7 +5,7 @@ export default function Footer() {
 	return (
 		<Box as="footer" py="6" bg="#0d0d0d" color="white">
 			<Flex justify="space-between" align="center" maxW="6xl" mx="auto">
-				<Text>&copy; 2023 Your Company. All rights reserved.</Text>
+				<Text>&copy; 2023 ZODI90 Ltd. All rights reserved.</Text>
 				<Flex align="center">
 					<IconButton
 						as={Link}

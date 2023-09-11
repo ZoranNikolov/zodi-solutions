@@ -8,7 +8,14 @@ import {
 
 export default function Navigation() {
 	return (
-		<Flex justify={"center"} as={"header"} backgroundColor={"#0d0d0d"} pos={"fixed"} w={"100%"}>
+		<Flex
+			justify={"center"}
+			as={"header"}
+			backgroundColor={"#0d0d0d"}
+			pos={"fixed"}
+			w={"100%"}
+			zIndex={1}
+		>
 			<Breadcrumb
 				spacing="8px"
 				separator={<ChevronRightIcon color="gray.500" />}
