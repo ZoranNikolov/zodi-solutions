@@ -17,12 +17,33 @@ export default function WhatWeDo() {
 	return (
 		<HStack
 			spacing="5px"
+            backgroundColor={"#dfe5f3"}
 			py={5}
 			style={{
 				display: "flex",
 				justifyContent: "center",
 			}}
 		>
+            	<Box
+				ref={ref}
+				boxSize="sm"
+				style={{
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					// Apply the animation class based on the 'inView' state
+					transform: inView ? "translateX(0)" : "translateX(-40%)",
+					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
+					opacity: inView ? 1 : 0,
+				}}
+			>
+				<Image
+					src={youCanImage}
+					borderRadius="xl"
+					maxH={300}
+					alt="holding smartphone"
+				/>
+			</Box>
 			<VStack width="50%" fontFamily={"sans-serif"}>
 				<Text
 					as={"h3"}
@@ -33,7 +54,7 @@ export default function WhatWeDo() {
 					width="100%"
 					textAlign={"left"}
 				>
-					Уеб решения за вас
+					Какво правим?
 				</Text>
 				<VStack
 					width="100%"
@@ -62,30 +83,11 @@ export default function WhatWeDo() {
 							transition: "all 0.325s ease-in-out",
 						}}
 					>
-						Научете какво правим
+						Научете повече
 					</Button>
 				</VStack>
 			</VStack>
-			<Box
-				ref={ref}
-				boxSize="sm"
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(40%)",
-					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					opacity: inView ? 1 : 0,
-				}}
-			>
-				<Image
-					src={youCanImage}
-					borderRadius="xl"
-					maxH={300}
-					alt="holding smartphone"
-				/>
-			</Box>
+		
 		</HStack>
 	);
 }
