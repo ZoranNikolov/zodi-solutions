@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function WebSolutionsForYou() {
 	const [ref, inView] = useInView({
-		triggerOnce: true, 
+		triggerOnce: true,
 		threshold: 0.5,
 	});
 
@@ -27,10 +27,11 @@ export default function WebSolutionsForYou() {
 				<Text
 					as={"h3"}
 					fontSize={"3xl"}
-					p={3}
 					py={5}
 					fontWeight={"bold"}
 					textTransform={"uppercase"}
+					width="100%"
+					textAlign={"left"}
 				>
 					Уеб решения за вас
 				</Text>
@@ -41,16 +42,15 @@ export default function WebSolutionsForYou() {
 					fontWeight={"normal"}
 				>
 					<Text as={"p"}>
-						Зодисълюшънс е дигитална агенция, специализирана в
-						изграждането на уеб решения за Вашия бизнес. Ние
-						подпомагаме компании в страната чрез изграждане на
-						персонализирани уебсайтове, които отговарят на нуждите
-						на бизнеса. Всеки сайт, който създаваме, е направен
+						Зодисълюшънс е дигитална агенция, специализирана в изграждането на
+						уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
+						чрез изграждане на персонализирани уебсайтове, които отговарят на
+						нуждите на бизнеса. Всеки сайт, който създаваме, е направен
 						специално за Вас, според Вашите изисквания.
 					</Text>
 					<Text as={"p"}>
-						Свържете се с нас, за да получите подробна информация за
-						нашите услуги.
+						Свържете се с нас, за да получите подробна информация за нашите
+						услуги.
 					</Text>
 					<Button
 						fontFamily={"sans-serif"}
@@ -79,8 +79,7 @@ export default function WebSolutionsForYou() {
 					alignItems: "center",
 					// Apply the animation class based on the 'inView' state
 					transform: inView ? "translateX(0)" : "translateX(40%)",
-					transition:
-						"transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
+					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
 					opacity: inView ? 1 : 0,
 				}}
 			>
