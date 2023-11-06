@@ -1,5 +1,5 @@
 import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import youCanImage from "../assets/images/you-can-image.jpg";
+import img from "../assets/images/workspace.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -17,14 +17,15 @@ export default function WhatWeDo() {
 	return (
 		<HStack
 			spacing="5px"
-            backgroundColor={"#dfe5f3"}
+			backgroundColor={"#dfe5f3"}
 			py={5}
 			style={{
 				display: "flex",
 				justifyContent: "center",
 			}}
+			width="100%"
 		>
-            	<Box
+			<Box
 				ref={ref}
 				boxSize="sm"
 				style={{
@@ -38,13 +39,15 @@ export default function WhatWeDo() {
 				}}
 			>
 				<Image
-					src={youCanImage}
+					src={img}
 					borderRadius="xl"
 					maxH={300}
-					alt="holding smartphone"
+					alt="workspace"
 				/>
 			</Box>
-			<VStack width="50%" fontFamily={"sans-serif"}>
+			<VStack width="60%" fontFamily={"sans-serif"} 
+			pl={50}
+			>
 				<Text
 					as={"h3"}
 					fontSize={"3xl"}
@@ -87,7 +90,6 @@ export default function WhatWeDo() {
 					</Button>
 				</VStack>
 			</VStack>
-		
 		</HStack>
 	);
 }

@@ -1,5 +1,5 @@
 import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import youCanImage from "../assets/images/you-can-image.jpg";
+import img from "../assets/images/the-future-is-here.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -22,8 +22,9 @@ export default function WebSolutionsForYou() {
 				display: "flex",
 				justifyContent: "center",
 			}}
+			width="100%"
 		>
-			<VStack width="50%" fontFamily={"sans-serif"}>
+			<VStack width="60%" fontFamily={"sans-serif"} pr={50}>
 				<Text
 					as={"h3"}
 					fontSize={"3xl"}
@@ -84,10 +85,10 @@ export default function WebSolutionsForYou() {
 				}}
 			>
 				<Image
-					src={youCanImage}
+					src={img}
 					borderRadius="xl"
 					maxH={300}
-					alt="holding smartphone"
+					alt="the-future-is-here"
 				/>
 			</Box>
 		</HStack>
