@@ -1,13 +1,8 @@
-import {
-	Button,
-	HStack,
-	StackDivider,
-	Text,
-	VStack,
-} from "@chakra-ui/react";
+import { Button, HStack, StackDivider, Text, VStack } from "@chakra-ui/react";
 import WebSolutionsForYou from "./WebSolutionsForYou";
 import { useEffect, useState } from "react";
 import WhatWeDo from "./WhatWeDo";
+import WebDesignAndDevelopment from "./WebDesignAndDevelopment";
 
 export default function Home() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
@@ -102,6 +97,9 @@ export default function Home() {
 			</div>
 			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
 				<WhatWeDo />
+			</div>
+			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
+				<WebDesignAndDevelopment />
 			</div>
 		</>
 	);
