@@ -2,6 +2,7 @@ import { HStack, Text, VStack } from "@chakra-ui/react";
 
 export default function WebSolutionsForYourNeeds() {
 	return (
+    <>
     <HStack
     width="100%"
     backgroundColor={"#176776"}
@@ -22,8 +23,49 @@ export default function WebSolutionsForYourNeeds() {
       >
         Защо да изберете нас
         </Text>
-      
     </VStack>
   </HStack>
+  <HStack
+			spacing="5px"
+			py={5}
+			style={{
+				display: "flex",
+				justifyContent: "center",
+			}}
+			width="100%"
+		>
+			<VStack width="60%" fontFamily={"sans-serif"} pr={50}>
+				<Text
+					as={"h3"}
+					fontSize={"3xl"}
+					py={5}
+					fontWeight={"bold"}
+					textTransform={"uppercase"}
+					width="100%"
+					textAlign={"left"}
+				>
+					Уеб решения за вас
+				</Text>
+				<VStack
+					width="100%"
+					alignItems="left"
+					fontSize={"md"}
+					fontWeight={"normal"}
+				>
+					<Text as={"p"}>
+						Зодисълюшънс е дигитална агенция, специализирана в изграждането на
+						уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
+						чрез изграждане на персонализирани уебсайтове, които отговарят на
+						нуждите на бизнеса. Всеки сайт, който създаваме, е направен
+						специално за Вас, според Вашите изисквания.
+					</Text>
+					<Text as={"p"}>
+						Свържете се с нас, за да получите подробна информация за нашите
+						услуги.
+					</Text>
+				</VStack>
+			</VStack>
+		</HStack>
+  </>
 	);
 }
