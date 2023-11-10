@@ -97,7 +97,7 @@ export default function WebDesignAndDevelopment() {
 					// Apply the animation class based on the 'inView' state
 					transform: inView ? "translateX(0)" : "translateX(10%)",
 					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					transitionDelay: "1s",
+					transitionDelay: "0.75s",
 					opacity: inView ? 1 : 0,
 				}}
 				border={"1px"}

@@ -5,6 +5,7 @@ import {
 	BreadcrumbLink,
 	Flex,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
 	return (
@@ -25,7 +26,13 @@ export default function Navigation() {
 				color={"#dfe5f3"}
 			>
 				<BreadcrumbItem isCurrentPage>
-					<BreadcrumbLink href="#">Начало</BreadcrumbLink>
+					<BreadcrumbLink>
+					<Link
+					to={"/"}
+					>
+					Начало
+					</Link>
+					</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>

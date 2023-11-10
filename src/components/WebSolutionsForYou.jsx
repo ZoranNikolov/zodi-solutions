@@ -2,6 +2,7 @@ import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import img from "../assets/images/the-future-is-here.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 export default function WebSolutionsForYou() {
 	const [ref, inView] = useInView({
@@ -67,7 +68,7 @@ export default function WebSolutionsForYou() {
 							transition: "all 0.325s ease-in-out",
 						}}
 					>
-						Научете повече
+						<Link to={"/web-solutions"}>Научете повече</Link>
 					</Button>
 				</VStack>
 			</VStack>

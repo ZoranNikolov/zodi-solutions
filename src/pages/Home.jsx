@@ -1,8 +1,8 @@
 import { Button, HStack, StackDivider, Text, VStack } from "@chakra-ui/react";
-import WebSolutionsForYou from "./WebSolutionsForYou";
+import WebSolutionsForYou from "../components/WebSolutionsForYou";
 import { useEffect, useState } from "react";
-import WhatWeDo from "./WhatWeDo";
-import WebDesignAndDevelopment from "./WebDesignAndDevelopment";
+import WhatWeDo from "../components/WhatWeDo";
+import WebDesignAndDevelopment from "../components/WebDesignAndDevelopment";
 
 export default function Home() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
