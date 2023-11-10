@@ -33,7 +33,7 @@ export default function WebDesignAndDevelopment() {
 					justifyContent: "center",
 					alignItems: "center",
 					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(-40%)",
+					transform: inView ? "translateX(0)" : "translateX(-10%)",
 					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
 					opacity: inView ? 1 : 0,
 				}}
@@ -95,7 +95,7 @@ export default function WebDesignAndDevelopment() {
 					justifyContent: "center",
 					alignItems: "center",
 					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(40%)",
+					transform: inView ? "translateX(0)" : "translateX(10%)",
 					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
 					transitionDelay: "1s",
 					opacity: inView ? 1 : 0,
