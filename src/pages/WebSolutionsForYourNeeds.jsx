@@ -1,6 +1,10 @@
 import { HStack, Text, VStack } from "@chakra-ui/react";
+import WeDoTheWork from "../components/WeDoTheWork";
+import { useState } from "react";
 
 export default function WebSolutionsForYourNeeds() {
+	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
+
 	return (
     <>
     <HStack
@@ -18,7 +22,6 @@ export default function WebSolutionsForYourNeeds() {
         fontSize={"5xl"}
         textAlign={"left"}
         pb={5}
-        width="60%"
         color={"white"}
       >
         Защо да изберете нас
@@ -27,14 +30,14 @@ export default function WebSolutionsForYourNeeds() {
   </HStack>
   <HStack
 			spacing="5px"
-			py={5}
+			py={10}
 			style={{
 				display: "flex",
 				justifyContent: "center",
 			}}
 			width="100%"
 		>
-			<VStack width="60%" fontFamily={"sans-serif"} pr={50}>
+			<VStack width="80%" fontFamily={"sans-serif"} pr={50}>
 				<Text
 					as={"h3"}
 					fontSize={"3xl"}
@@ -43,6 +46,7 @@ export default function WebSolutionsForYourNeeds() {
 					textTransform={"uppercase"}
 					width="100%"
 					textAlign={"left"}
+					pt={0}
 				>
 					Уеб решения за вас
 				</Text>
@@ -66,6 +70,10 @@ export default function WebSolutionsForYourNeeds() {
 				</VStack>
 			</VStack>
 		</HStack>
+
+		<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
+				<WeDoTheWork />
+			</div>
   </>
 	);
 }

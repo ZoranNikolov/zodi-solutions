@@ -54,22 +54,24 @@ export default function WebSolutionsForYou() {
 						Свържете се с нас, за да получите подробна информация за нашите
 						услуги.
 					</Text>
-					<Button
-						fontFamily={"sans-serif"}
-						fontSize={"md"}
-						p={5}
-						my={5}
-						w={"20%"}
-						bg={"#557373"}
-						_hover={{
-							bg: "#272401",
-							color: "#dfe5f3",
-							transform: "scale(1.05)",
-							transition: "all 0.325s ease-in-out",
-						}}
-					>
-						<Link to={"/web-solutions"}>Научете повече</Link>
-					</Button>
+					<Link to={"/web-solutions"}>
+						<Button
+							fontFamily={"sans-serif"}
+							fontSize={"md"}
+							p={5}
+							my={5}
+							w={"20%"}
+							bg={"#557373"}
+							_hover={{
+								bg: "#272401",
+								color: "#dfe5f3",
+								transform: "scale(1.05)",
+								transition: "all 0.325s ease-in-out",
+							}}
+						>
+							Научете повече
+						</Button>
+					</Link>
 				</VStack>
 			</VStack>
 			<Box
