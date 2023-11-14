@@ -1,12 +1,12 @@
-import { Box, Button, HStack, Text, VStack, Image } from '@chakra-ui/react'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Box, Button, HStack, Text, VStack, Image } from "@chakra-ui/react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import img from "../assets/images/the-future-is-here.jpg";
 
 export default function WeDoTheWork() {
-    const [ref, inView] = useInView({
+	const [ref, inView] = useInView({
 		triggerOnce: true,
 		threshold: 0.5,
 	});
@@ -15,8 +15,8 @@ export default function WeDoTheWork() {
 		if (inView) {
 		}
 	}, [inView]);
-  return (
-    <HStack
+	return (
+		<HStack
 			spacing="5px"
 			py={5}
 			style={{
@@ -24,7 +24,7 @@ export default function WeDoTheWork() {
 				justifyContent: "center",
 			}}
 			width="100%"
-            backgroundColor={"#dfe5f3"}
+			backgroundColor={"#dfe5f3"}
 		>
 			<VStack width="60%" fontFamily={"sans-serif"} pr={50}>
 				<Text
@@ -36,7 +36,7 @@ export default function WeDoTheWork() {
 					width="100%"
 					textAlign={"left"}
 				>
-					Уеб решения за вас
+					Личен контакт
 				</Text>
 				<VStack
 					width="100%"
@@ -45,11 +45,10 @@ export default function WeDoTheWork() {
 					fontWeight={"normal"}
 				>
 					<Text as={"p"}>
-						Зодисълюшънс е дигитална агенция, специализирана в изграждането на
-						уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
-						чрез изграждане на персонализирани уебсайтове, които отговарят на
-						нуждите на бизнеса. Всеки сайт, който създаваме, е направен
-						специално за Вас, според Вашите изисквания.
+						Когато се свържете с нас, същите хора, с които разговаряте, са тези,
+						които ще работят по изграждането на вашия уебсайт. Ние сме малък
+						екип, който работи директно с нашите клиенти по техните текущи
+						нужди.{" "}
 					</Text>
 					<Text as={"p"}>
 						Свържете се с нас, за да получите подробна информация за нашите
@@ -96,5 +95,5 @@ export default function WeDoTheWork() {
 				/>
 			</Box>
 		</HStack>
-  )
+	);
 }
