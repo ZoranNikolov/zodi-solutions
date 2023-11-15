@@ -1,5 +1,5 @@
 import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import img from "../assets/images/workspace.jpg";
+import img from "../assets/images/web-designer-office-working.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 

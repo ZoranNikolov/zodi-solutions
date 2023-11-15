@@ -2,6 +2,7 @@ import { HStack, Text, VStack } from "@chakra-ui/react";
 import WeDoTheWork from "../components/WeDoTheWork";
 import { useState } from "react";
 import OurWebsitesAreCustom from "../components/OurWebsitesAreCustom";
+import WeDoItRight from "../components/WeDoItRight";
 
 export default function WebSolutionsForYourNeeds() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
@@ -77,6 +78,9 @@ export default function WebSolutionsForYourNeeds() {
 			</div>
 			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
 				<OurWebsitesAreCustom />
+			</div>
+			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
+				<WeDoItRight />
 			</div>
 		</>
 	);

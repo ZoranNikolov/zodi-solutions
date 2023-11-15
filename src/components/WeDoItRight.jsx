@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import img from "../assets/images/people-discuss-website-project.jpg";
+import img from "../assets/images/mobile-responsive-website.jpg";
 
-export default function WeDoTheWork() {
+export default function WeDoItRight() {
 	const [ref, inView] = useInView({
 		triggerOnce: true,
 		threshold: 0.5,
@@ -36,7 +36,7 @@ export default function WeDoTheWork() {
 					width="100%"
 					textAlign={"left"}
 				>
-					Личен контакт
+					Знаем какво правим
 				</Text>
 				<VStack
 					width="100%"
@@ -45,10 +45,10 @@ export default function WeDoTheWork() {
 					fontWeight={"normal"}
 				>
 					<Text as={"p"}>
-						Когато се свържете с нас, същите хора, с които разговаряте, са тези,
-						които ще работят по изграждането на вашия уебсайт. Ние сме малък
-						екип, който работи директно с нашите клиенти по техните текущи
-						нужди.{" "}
+						Ако не сте в сферата на уеб разработката, може да не
+						знаете какво се е променило в областта през последните месеци или години. Ние от Зодисълюшънс ще се погрижим вашият уебсайт да
+						се зарежда бързо и да е лесен за навигация. Също така ще се погрижим
+						вашият сайт да работи на всички формати и устройства, от смартфони
 					</Text>
 					<Text as={"p"}>
 						Свържете се с нас, за да получите подробна информация за нашите
