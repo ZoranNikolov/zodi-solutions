@@ -37,7 +37,14 @@ export default function WhatWeDo() {
 					opacity: inView ? 1 : 0,
 				}}
 			>
-				<Image src={img} borderRadius="xl" maxH={300} alt="workspace" />
+				<Image
+					src={img}
+					borderRadius="xl"
+					maxH={300}
+					maxW="100%"
+					objectFit="cover"
+					alt="workspace"
+				/>
 			</Box>
 			<VStack width="60%" fontFamily={"sans-serif"} pl={50}>
 				<Text

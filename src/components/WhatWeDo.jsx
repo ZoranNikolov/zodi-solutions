@@ -42,6 +42,7 @@ export default function WhatWeDo() {
 					src={img}
 					borderRadius="xl"
 					maxH={300}
+					objectFit='cover'
 					alt="workspace"
 				/>
 			</Box>

@@ -91,6 +91,7 @@ export default function WebSolutionsForYou() {
 					src={img}
 					borderRadius="xl"
 					maxH={300}
+					objectFit='cover'
 					alt="the-future-is-here"
 				/>
 			</Box>
