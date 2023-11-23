@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import img from "../assets/images/mobile-responsive-website.jpg";
+import img from "../assets/images/responsive-web-design.jpg";
 
 export default function WeDoItRight() {
 	const [ref, inView] = useInView({
@@ -87,13 +87,13 @@ export default function WeDoItRight() {
 					opacity: inView ? 1 : 0,
 				}}
 			>
-				<Image
+			<Image
 					src={img}
 					borderRadius="xl"
 					maxH={300}
 					maxW="100%"
-					objectFit='cover'
-					alt="the-future-is-here"
+					objectFit="cover"
+					alt="workspace"
 				/>
 			</Box>
 		</HStack>

@@ -36,7 +36,11 @@ export default function Navigation() {
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href="#">Връзка с нас</BreadcrumbLink>
+					<BreadcrumbLink href="#">Нашите услуги</BreadcrumbLink>
+				</BreadcrumbItem>
+
+				<BreadcrumbItem>
+					<BreadcrumbLink href="/contact-us">Връзка с нас</BreadcrumbLink>
 				</BreadcrumbItem>
 			</Breadcrumb>
 		</Flex>
