@@ -1,10 +1,18 @@
 import { Button, HStack, Text, VStack } from "@chakra-ui/react";
-import React from 'react'
+import React from "react";
+import ContactForm from "../components/contactForm";
+import {
+	List,
+	ListItem,
+	ListIcon,
+} from "@chakra-ui/react";
+import { MdOutlineRocketLaunch } from "react-icons/md";
+
 
 export default function ContactUs() {
-  return (
-    <>
-    <HStack
+	return (
+		<>
+			<HStack
 				width="100%"
 				backgroundColor={"#176776"}
 				style={{
@@ -21,7 +29,7 @@ export default function ContactUs() {
 						pb={5}
 						color={"white"}
 					>
-						Защо да изберете нас
+						Свържете се с нас
 					</Text>
 				</VStack>
 			</HStack>
@@ -35,18 +43,6 @@ export default function ContactUs() {
 				width="100%"
 			>
 				<VStack width="80%" fontFamily={"sans-serif"} pr={50}>
-					<Text
-						as={"h3"}
-						fontSize={"3xl"}
-						py={5}
-						fontWeight={"bold"}
-						textTransform={"uppercase"}
-						width="100%"
-						textAlign={"left"}
-						pt={0}
-					>
-						Уеб решения за вас
-					</Text>
 					<VStack
 						width="100%"
 						alignItems="left"
@@ -54,15 +50,71 @@ export default function ContactUs() {
 						fontWeight={"normal"}
 					>
 						<Text as={"p"}>
-							Зодисълюшънс е дигитална агенция, специализирана в изграждането на
-							уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
-							чрез изграждане на персонализирани уебсайтове, които отговарят на
-							нуждите на бизнеса. Всеки сайт, който създаваме, е направен
-							специално за Вас, според Вашите изисквания.
+							Добре дошли в раздела "Свържете се с нас" на Zodisolutions!
+						</Text>
+						<Text as={"p"} pb={5}>
+							Ние сме тук, за да направим вашите онлайн идеи реалност. Ако
+							търсите персонализирано решение за уеб присъствие, уеб дизайн, или
+							просто искате да освежите съществуващия си уебсайт, нашите
+							експерти са готови да ви помогнат.
+						</Text>
+						<Text
+							as={"h3"}
+							fontFamily={"sans-serif"}
+							fontSize={"3xl"}
+							pb={5}
+						>
+							Защо да изберете Zodi Solutions?
+						</Text>
+						<List spacing={3}>
+							<ListItem>
+								<ListIcon 
+								as={MdOutlineRocketLaunch} 
+								color="green.500" />
+								<b>Персонализиран подход:</b> Всеки уебсайт, който създаваме, е
+								уникален, направен специално за вас и вашия бизнес.
+							</ListItem>
+							<ListItem>
+								<ListIcon 
+								// as={MdCheckCircle} 
+								color="green.500" />
+								<b>Оптимизиран за Резултати:</b> Нашата цел е не само да
+								създадем уебсайт, но и да ви помогнем да постигнете вашите цели
+								чрез него.
+							</ListItem>
+							<ListItem>
+								<ListIcon
+								//  as={MdCheckCircle} 
+								color="green.500" />
+								<b>Съвременен Дизайн:</b> Използваме последните технологии и
+								тенденции в уеб дизайна, за да ви осигурим модерен и впечатляващ
+								външен вид.
+							</ListItem>
+						</List>
+						<Text
+							as={"h3"}
+							fontFamily={"sans-serif"}
+							fontSize={"3xl"}
+							pb={5}
+						>
+							Как да се свържете с нас?
+						</Text>
+						<Text as={"p"}>
+							Имате въпроси, идеи или искахте да започнете проект? Попълнете
+							формата по-долу и екипът ни ще ви отговори възможно най-скоро.{" "}
 						</Text>
 					</VStack>
 				</VStack>
 			</HStack>
-    </>
-  )
+			<VStack p={100}>
+				<ContactForm />
+				<Text as={"p"}>
+				Не чакайте - направете първия стъпки към успешното онлайн присъствие с Zodisolutions!
+				</Text>
+				<Text as={"p"}>
+				Вашият успех е нашият приоритет.
+				</Text>
+			</VStack>
+		</>
+	);
 }
