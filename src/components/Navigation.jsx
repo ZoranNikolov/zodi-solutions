@@ -5,7 +5,8 @@ import {
 	BreadcrumbLink,
 	Flex,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+// import { Link as ReactRouterLink } from "react-router-dom";
+// import { Link as ChakraLink } from "@chakra-ui/react";
 
 export default function Navigation() {
 	return (
@@ -27,20 +28,20 @@ export default function Navigation() {
 			>
 				<BreadcrumbItem isCurrentPage>
 					<BreadcrumbLink>
-					<Link
-					to={"/"}
-					>
-					Начало
-					</Link>
+						<Link to={"/"}>Начало</Link>
 					</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href="#">Нашите услуги</BreadcrumbLink>
+					<BreadcrumbLink href="#">
+						<Link to={"/web-solutions"}>Нашите услуги</Link>
+					</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href="/contact-us">Връзка с нас</BreadcrumbLink>
+					<BreadcrumbLink>
+						<Link to={"/contact-us"}>Връзка с нас</Link>
+					</BreadcrumbLink>
 				</BreadcrumbItem>
 			</Breadcrumb>
 		</Flex>

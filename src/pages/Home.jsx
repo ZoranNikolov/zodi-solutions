@@ -3,6 +3,7 @@ import WebSolutionsForYou from "../components/WebSolutionsForYou";
 import { useEffect, useState } from "react";
 import WhatWeDo from "../components/WhatWeDo";
 import WebDesignAndDevelopment from "../components/WebDesignAndDevelopment";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
@@ -74,6 +75,7 @@ export default function Home() {
 							Гарантиран срок за изпълнение.
 						</Text>
 					</VStack>
+					<Link to={"/contact-us"}>
 					<Button
 						fontFamily={"sans-serif"}
 						fontSize={"md"}
@@ -89,6 +91,7 @@ export default function Home() {
 					>
 						Свържете се с нас
 					</Button>
+					</Link>
 				</VStack>
 			</HStack>
 

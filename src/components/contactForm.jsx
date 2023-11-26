@@ -18,8 +18,8 @@ export default function ContactForm() {
 
 		emailjs
 			.sendForm(
-				"service_n4kjhbf",
-				"template_5hdvgub",
+				"service_r2joftb",
+				"template_7hfn9zh",
 				form.current,
 				"vu-iLvSTPOKJQ0ckO"
 			)
@@ -49,58 +49,55 @@ export default function ContactForm() {
 			width="60%"
 		>
 			<HStack>
-
-			<FormControl>
-				{/* <FormLabel htmlFor="user_name">Your Name</FormLabel> */}
-				<Input
-					type="text"
-					id="user_name"
-					name="user_name"
-					placeholder="Име*"
-					variant="filled"
-					isRequired
-				/>
-			</FormControl>
-			<FormControl>
-				{/* <FormLabel htmlFor="user_name">Your Name</FormLabel> */}
-				<Input
-					type="text"
-					id="user_name"
-					name="user_name"
-					placeholder="Фамилия*"
-					variant="filled"
-					isRequired
-				/>
-			</FormControl>
+				<FormControl>
+					{/* <FormLabel htmlFor="user_name">Your Name</FormLabel> */}
+					<Input
+						type="text"
+						id="firstName"
+						name="firstName"
+						placeholder="Име*"
+						variant="filled"
+						isRequired
+					/>
+				</FormControl>
+				<FormControl>
+					{/* <FormLabel htmlFor="user_name">Your Name</FormLabel> */}
+					<Input
+						type="text"
+						id="lastName"
+						name="lastName"
+						placeholder="Фамилия*"
+						variant="filled"
+						isRequired
+					/>
+				</FormControl>
 			</HStack>
 
-<HStack>
+			<HStack>
+				<FormControl>
+					{/* <FormLabel htmlFor="user_email">Email</FormLabel> */}
+					<Input
+						type="email"
+						id="userEmail"
+						name="userEmail"
+						placeholder="Email*"
+						variant="filled"
+						isRequired
+					/>
+				</FormControl>
 
-			<FormControl>
-				{/* <FormLabel htmlFor="user_email">Email</FormLabel> */}
-				<Input
-					type="email"
-					id="user_email"
-					name="user_email"
-					placeholder="Email*"
-					variant="filled"
-					isRequired
-				/>
-			</FormControl>
-
-			<FormControl>
-				{/* <FormLabel htmlFor="user_email">Email</FormLabel> */}
-				<Input
-					type="email"
-					id="user_email"
-					name="user_email"
-					placeholder="Телефон"
-					variant="filled"
-					isRequired
-				/>
-			</FormControl>
-</HStack>
-
+				<FormControl>
+					{/* <FormLabel htmlFor="user_email">Email</FormLabel> */}
+					<Input
+						type="tel"
+						id="userPhoneNumber"
+						name="userPhoneNumber"
+						placeholder="Телефон"
+						variant="filled"
+						isRequired
+					/>
+				</FormControl>
+			</HStack>
 
 			<FormControl>
 				{/* <FormLabel htmlFor="message">Message</FormLabel> */}
@@ -113,7 +110,19 @@ export default function ContactForm() {
 				/>
 			</FormControl>
 
-			<Button type="submit" colorScheme="teal">
+			<Button
+				type="submit"
+				bg={"#557373"}
+				fontSize={"md"}
+				_hover={{
+					bg: "#272401",
+					color: "#dfe5f3",
+					transform: "scale(1.05)",
+					transition: "all 0.325s ease-in-out",
+				}}
+				width="25%"
+				margin="0 auto"
+			>
 				Изпрати
 			</Button>
 		</VStack>

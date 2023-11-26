@@ -3,6 +3,8 @@ import WeDoTheWork from "../components/WeDoTheWork";
 import { useState } from "react";
 import OurWebsitesAreCustom from "../components/OurWebsitesAreCustom";
 import WeDoItRight from "../components/WeDoItRight";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink, LinkProps } from "@chakra-ui/react";
 
 export default function WebSolutionsForYourNeeds() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
@@ -110,22 +112,21 @@ export default function WebSolutionsForYourNeeds() {
 							Свържете се с нас, за да получите своя завладяващ уебсайт за Вашия
 							бизнес.
 						</Text>
-						<Button
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							p={5}
-							my={5}
-							w={"20%"}
-							bg={"#557373"}
-							_hover={{
-								bg: "#272401",
-								color: "#dfe5f3",
-								transform: "scale(1.05)",
-								transition: "all 0.325s ease-in-out",
-							}}
-						>
-							Свържете се с нас
-						</Button>
+						<ChakraLink as={ReactRouterLink} to="/contact-us">
+							<Button
+								fontFamily={"sans-serif"}
+								fontSize={"md"}
+								bg={"#557373"}
+								_hover={{
+									bg: "#272401",
+									color: "#dfe5f3",
+									transform: "scale(1.05)",
+									transition: "all 0.325s ease-in-out",
+								}}
+							>
+								Свържете се с нас
+							</Button>
+						</ChakraLink>
 					</VStack>
 				</VStack>
 			</HStack>
