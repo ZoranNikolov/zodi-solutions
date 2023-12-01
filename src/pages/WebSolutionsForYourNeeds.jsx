@@ -4,7 +4,7 @@ import { useState } from "react";
 import OurWebsitesAreCustom from "../components/OurWebsitesAreCustom";
 import WeDoItRight from "../components/WeDoItRight";
 import { Link as ReactRouterLink } from "react-router-dom";
-import { Link as ChakraLink, LinkProps } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
 
 export default function WebSolutionsForYourNeeds() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
