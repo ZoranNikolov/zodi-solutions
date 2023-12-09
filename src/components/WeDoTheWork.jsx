@@ -50,10 +50,6 @@ export default function WeDoTheWork() {
 						екип, който работи директно с нашите клиенти по техните текущи
 						нужди.{" "}
 					</Text>
-					<Text as={"p"}>
-						Свържете се с нас, за да получите подробна информация за нашите
-						услуги.
-					</Text>
 					<Link to={"/web-solutions"}>
 						<Button
 							fontFamily={"sans-serif"}
@@ -91,7 +87,7 @@ export default function WeDoTheWork() {
 					src={img}
 					borderRadius="xl"
 					maxH={300}
-					objectFit='cover'
+					objectFit="cover"
 					alt="the-future-is-here"
 				/>
 			</Box>

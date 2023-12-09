@@ -1,6 +1,7 @@
 import { Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 export default function WebDesignAndDevelopment() {
 	const [ref, inView] = useInView({
@@ -68,22 +69,24 @@ export default function WebDesignAndDevelopment() {
 					<Text as={"p"}>
 						Изготвяме уникален дизайн фокусиран върху Вашия бизнес.
 					</Text>
-					<Button
-						fontFamily={"sans-serif"}
-						fontSize={"md"}
-						p={5}
-						my={5}
-						w={"80%"}
-						bg={"#557373"}
-						_hover={{
-							bg: "#272401",
-							color: "#dfe5f3",
-							transform: "scale(1.05)",
-							transition: "all 0.325s ease-in-out",
-						}}
-					>
-						Разберете повече за дизайна и разработката
-					</Button>
+					<Link to="/web-development">
+						<Button
+							fontFamily={"sans-serif"}
+							fontSize={"md"}
+							p={5}
+							my={5}
+							w={"100%"}
+							bg={"#557373"}
+							_hover={{
+								bg: "#272401",
+								color: "#dfe5f3",
+								transform: "scale(1.05)",
+								transition: "all 0.325s ease-in-out",
+							}}
+						>
+							Разберете повече за дизайна и разработката
+						</Button>
+					</Link>
 				</VStack>
 			</Box>
 
@@ -129,22 +132,24 @@ export default function WebDesignAndDevelopment() {
 					<Text as={"p"}>
 						Грижим се за правилното функциониране на сайта Ви.
 					</Text>
-					<Button
-						fontFamily={"sans-serif"}
-						fontSize={"md"}
-						p={5}
-						my={5}
-						w={"80%"}
-						bg={"#557373"}
-						_hover={{
-							bg: "#272401",
-							color: "#dfe5f3",
-							transform: "scale(1.05)",
-							transition: "all 0.325s ease-in-out",
-						}}
-					>
-						Разберете повече за поддръжката
-					</Button>
+					<Link to="/web-support">
+						<Button
+							fontFamily={"sans-serif"}
+							fontSize={"md"}
+							p={5}
+							my={5}
+							w={"100%"}
+							bg={"#557373"}
+							_hover={{
+								bg: "#272401",
+								color: "#dfe5f3",
+								transform: "scale(1.05)",
+								transition: "all 0.325s ease-in-out",
+							}}
+						>
+							Разберете повече за поддръжката
+						</Button>
+					</Link>
 				</VStack>
 			</Box>
 		</HStack>

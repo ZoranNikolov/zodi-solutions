@@ -18,8 +18,8 @@ const transitionDuration = "0.5s"; // Adjust the transition duration
 // Data-driven approach for navigation items
 const navigationItems = [
 	{ label: "Начало", to: "/" },
-	{ label: "Нашите услуги", to: "/web-solutions" },
-	{ label: "Връзка с нас", to: "/contact-us" },
+	{ label: "За нас", to: "/about" },
+	{ label: "Пишете  ни", to: "/contact-us" },
 ];
 
 export default function Navigation() {

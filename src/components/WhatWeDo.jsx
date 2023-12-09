@@ -2,6 +2,7 @@ import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import img from "../assets/images/workspace.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 export default function WhatWeDo() {
 	const [ref, inView] = useInView({
@@ -73,22 +74,24 @@ export default function WhatWeDo() {
 						се стремим всеки уебсайт, който изработваме, да отговаря на
 						конкретните нужди.
 					</Text>
-					<Button
-						fontFamily={"sans-serif"}
-						fontSize={"md"}
-						p={5}
-						my={5}
-						w={"20%"}
-						bg={"#557373"}
-						_hover={{
-							bg: "#272401",
-							color: "#dfe5f3",
-							transform: "scale(1.05)",
-							transition: "all 0.325s ease-in-out",
-						}}
-					>
-						Научете повече
-					</Button>
+					<Link to={"/what-we-do"}>
+						<Button
+							fontFamily={"sans-serif"}
+							fontSize={"md"}
+							p={5}
+							my={5}
+							w={"20%"}
+							bg={"#557373"}
+							_hover={{
+								bg: "#272401",
+								color: "#dfe5f3",
+								transform: "scale(1.05)",
+								transition: "all 0.325s ease-in-out",
+							}}
+						>
+							Научете повече
+						</Button>
+					</Link>
 				</VStack>
 			</VStack>
 		</HStack>

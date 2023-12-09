@@ -96,7 +96,7 @@ export default function Home() {
 			</HStack>
 
 			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
-				<WebSolutionsForYou />
+			<WebSolutionsForYou />
 			</div>
 			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
 				<WhatWeDo />
@@ -104,6 +104,7 @@ export default function Home() {
 			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
 				<WebDesignAndDevelopment />
 			</div>
+			// to develop WebDesignAndDevelopment
 		</>
 	);
 }
