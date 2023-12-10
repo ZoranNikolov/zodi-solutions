@@ -1,110 +1,49 @@
-import { Button, HStack, StackDivider, Text, VStack } from "@chakra-ui/react";
+import React from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import WebSolutionsForYou from "../components/WebSolutionsForYou";
-import { useEffect, useState } from "react";
 import WhatWeDo from "../components/WhatWeDo";
 import WebDesignAndDevelopment from "../components/WebDesignAndDevelopment";
 import { Link } from "react-router-dom";
 
-export default function Home() {
-	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
-
-	useEffect(() => {
-		// Add the animation class when the component mounts
-		setAnimateWebSolutions(true);
-	}, []);
+const Home = () => {
 	return (
-		<>
-			<HStack
-				width="100%"
-				backgroundColor={"#dfe5f3"}
-				style={{
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
-				<VStack align={"left"} width="80%" pt={120} pb={10}>
-					<Text
-						as={"h1"}
-						fontFamily={"sans-serif"}
-						fontSize={"5xl"}
-						textAlign={"left"}
-						pb={5}
-						fontWeight={"bold"}
-						width="60%"
-					>
+		<Container fluid className="px-0">
+			<Row className="justify-content-center px-0 pt-5 first-color">
+				<Row lg="8" className="px-0 pt-5 pb-5 mt-5 width-80">
+					<h1 className="font-weight-bold">
 						Стъпка в правилната посока за Вашия бизнес
-					</Text>
-					<VStack
-						align={"left"}
-						divider={<StackDivider borderColor={"gray.300"} width={"5%"} />}
-						spacing={3}
-						// p={10}
-						width="60%"
-						pb={5}
-					>
-						<Text
-							as={"h3"}
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							textAlign={"left"}
-						>
-							Модерни решения за изграждане и развитие на всеки бизнес.
-						</Text>
-						<Text
-							as={"h3"}
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							textAlign={"left"}
-						>
-							Не използваме готови шаблони/темплейти.
-						</Text>
-						<Text
-							as={"h3"}
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							textAlign={"left"}
-						>
-							Безкомпромисни спрямо поетите ангажименти.
-						</Text>
-						<Text
-							as={"h3"}
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							textAlign={"left"}
-						>
-							Гарантиран срок за изпълнение.
-						</Text>
-					</VStack>
-					<Link to={"/contact-us"}>
-					<Button
-						fontFamily={"sans-serif"}
-						fontSize={"md"}
-						p={5}
-						w={"20%"}
-						bg={"#557373"}
-						_hover={{
-							bg: "#272401",
-							color: "#dfe5f3",
-							transform: "scale(1.05)",
-							transition: "all 0.325s ease-in-out",
-						}}
-					>
-						Свържете се с нас
-					</Button>
+					</h1>
+					<div className="mb-5"></div>
+					<Row className="mb-4">
+						<Col lg="6">
+							<p className="h5">
+								Модерни решения за изграждане и развитие на всеки бизнес.
+							</p>
+							<div className="border-bottom w-25 mb-4"></div>
+							<p className="h5">Не използваме готови шаблони/темплейти.</p>
+							<div className="border-bottom w-25 mb-4"></div>
+							<p className="h5">Безкомпромисни спрямо поетите ангажименти.</p>
+							<div className="border-bottom w-25 mb-4"></div>
+							<p className="h5">Гарантиран срок за изпълнение.</p>
+						</Col>
+					</Row>
+					<Link to="/contact-us">
+						<Button className="btn-lg btn-dark mt-4">Свържете се с нас</Button>
 					</Link>
-				</VStack>
-			</HStack>
-
-			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
-			<WebSolutionsForYou />
-			</div>
-			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
+				</Row>
+			</Row>
+			<Row>
+				<WebSolutionsForYou />
+			</Row>
+			<Row>
 				<WhatWeDo />
-			</div>
-			<div className={`slide-in ${animateWebSolutions ? "active" : ""}`}>
+			</Row>
+			<Row>
 				<WebDesignAndDevelopment />
-			</div>
-			// to develop WebDesignAndDevelopment
-		</>
+			</Row>
+			{/* Add additional components here */}
+		</Container>
 	);
-}
+};
+
+export default Home;

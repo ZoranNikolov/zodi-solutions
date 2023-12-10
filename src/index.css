@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -10,4 +12,12 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+}
+
+.first-color {
+	background-color: #dfe5f3;
+}
+
+.width-80 {
+	width: 80%;
 }
