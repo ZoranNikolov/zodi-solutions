@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import img from "../assets/images/the-future-is-here.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -16,85 +16,50 @@ export default function WebSolutionsForYou() {
 	}, [inView]);
 
 	return (
-		<HStack
-			spacing="5px"
-			py={5}
-			style={{
-				display: "flex",
-				justifyContent: "center",
-			}}
-			width="100%"
-		>
-			<VStack width="60%" fontFamily={"sans-serif"} pr={50}>
-				<Text
-					as={"h3"}
-					fontSize={"3xl"}
-					py={5}
-					fontWeight={"bold"}
-					textTransform={"uppercase"}
-					width="100%"
-					textAlign={"left"}
-				>
-					Уеб решения за вас
-				</Text>
-				<VStack
-					width="100%"
-					alignItems="left"
-					fontSize={"md"}
-					fontWeight={"normal"}
-				>
-					<Text as={"p"}>
-						Зодисълюшънс е дигитална агенция, специализирана в изграждането на
-						уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
-						чрез изграждане на персонализирани уебсайтове, които отговарят на
-						нуждите на бизнеса. Всеки сайт, който създаваме, е направен
-						специално за Вас, според Вашите изисквания.
-					</Text>
-					<Text as={"p"}>
-						Свържете се с нас, за да получите подробна информация за нашите
-						услуги.
-					</Text>
+		<Container fluid className="py-5 justify-content-center">
+			<Row className="justify-content-center">
+				<Col lg="6" className="pr-5 justify-content-center">
+					<h3 className="font-weight-bold text-uppercase pb-5">
+						Уеб решения за вас
+					</h3>
+					<div className="mb-3">
+						<p>
+							Зодисълюшънс е дигитална агенция, специализирана в изграждането на
+							уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
+							чрез изграждане на персонализирани уебсайтове, които отговарят на
+							нуждите на бизнеса. Всеки сайт, който създаваме, е направен
+							специално за Вас, според Вашите изисквания.
+						</p>
+						<p>
+							Свържете се с нас, за да получите подробна информация за нашите
+							услуги.
+						</p>
+					</div>
 					<Link to={"/web-solutions"}>
-						<Button
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							p={5}
-							my={5}
-							w={"20%"}
-							bg={"#557373"}
-							_hover={{
-								bg: "#272401",
-								color: "#dfe5f3",
-								transform: "scale(1.05)",
-								transition: "all 0.325s ease-in-out",
-							}}
-						>
-							Научете повече
-						</Button>
+						<Button className="btn-lg btn-dark mt-4">Научете повече</Button>
 					</Link>
-				</VStack>
-			</VStack>
-			<Box
-				ref={ref}
-				boxSize="sm"
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(40%)",
-					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					opacity: inView ? 1 : 0,
-				}}
-			>
-				<Image
-					src={img}
-					borderRadius="xl"
-					maxH={300}
-					objectFit='cover'
-					alt="the-future-is-here"
-				/>
-			</Box>
-		</HStack>
+				</Col>
+				<Col lg="6">
+					<div
+						ref={ref}
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							transform: inView ? "translateX(0)" : "translateX(40%)",
+							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
+							opacity: inView ? 1 : 0,
+						}}
+					>
+						<Image
+							src={img}
+							rounded
+							alt="the-future-is-here"
+							style={{ maxHeight: "300px", objectFit: "cover" }}
+						/>
+					</div>
+				</Col>
+			</Row>
+		</Container>
 	);
 }

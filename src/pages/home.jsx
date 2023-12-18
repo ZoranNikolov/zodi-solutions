@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
 	return (
-		<Container fluid className="px-0">
-			<Row className="justify-content-center px-0 pt-5 first-color">
-				<Row lg="8" className="px-0 pt-5 pb-5 mt-5 width-80">
+		<Container fluid className="px-0 width-100">
+			<Row className="justify-content-center mx-0 px-0 pt-5 first-color">
+				<Row lg="8" className="px-0 pt-5 pb-5 mt-5 width-80 mx-0">
 					<h1 className="font-weight-bold">
 						Стъпка в правилната посока за Вашия бизнес
 					</h1>
@@ -27,21 +27,24 @@ const Home = () => {
 							<p className="h5">Гарантиран срок за изпълнение.</p>
 						</Col>
 					</Row>
-					<Link to="/contact-us">
-						<Button className="btn-lg btn-dark mt-4">Свържете се с нас</Button>
-					</Link>
+					<Col>
+						<Link to="/contact-us">
+							<Button className="btn-lg btn-dark mt-4">
+								Свържете се с нас
+							</Button>
+						</Link>
+					</Col>
 				</Row>
 			</Row>
-			<Row>
+			<Row className="mx-auto px-0 width-80">
 				<WebSolutionsForYou />
 			</Row>
-			<Row>
+			<Row className="mx-auto first-color px-0">
 				<WhatWeDo />
 			</Row>
 			<Row>
 				<WebDesignAndDevelopment />
 			</Row>
-			{/* Add additional components here */}
 		</Container>
 	);
 };

@@ -1,10 +1,6 @@
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import {
-	Breadcrumb,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	Flex,
-} from "@chakra-ui/react";
+import React from "react";
+import { Breadcrumb, Row } from "react-bootstrap";
+import { ChevronRight } from "react-bootstrap-icons";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 
 // Constants for styling
@@ -22,49 +18,64 @@ const navigationItems = [
 	{ label: "Пишете  ни", to: "/contact-us" },
 ];
 
-export default function Navigation() {
+const Navigation = () => {
 	const location = useLocation();
 
 	return (
-		<Flex
-			justify="center"
-			as="header"
-			backgroundColor={headerBackgroundColor}
-			pos="fixed"
-			w="100%"
-			zIndex={1}
+		<nav
+			className="navbar navbar-expand-lg navbar-dark"
+			style={{
+				backgroundColor: headerBackgroundColor,
+				position: "fixed",
+				width: "100%",
+				zIndex: 1,
+			}}
 		>
-			<Breadcrumb
-				spacing="8px"
-				separator={<ChevronRightIcon color="gray.500" />}
-				display="flex"
-				fontSize="2xl"
-				height={90}
-				color={breadcrumbColor}
-			>
-				{navigationItems.map((item, index) => {
-					const isCurrentPage = item.to === location.pathname;
+			<div className="container justify-content-center">
+				<Row>
+				<Breadcrumb
+					className="navbar-nav margin-bottom-0"
+					separator={<ChevronRight color="gray.500" />}
+				>
+					{navigationItems.map((item, index) => {
+						const isCurrentPage = item.to === location.pathname;
 
-					return (
-						<BreadcrumbItem
-							key={index}
-							isCurrentPage={isCurrentPage}
-							fontWeight={
-								isCurrentPage ? currentBreadcrumbFontWeight : undefined
-							}
-							_hover={{
-								textDecoration: "none",
-								color: isCurrentPage ? currentBreadcrumbColor : hoverTextColor,
-								transition: `color ${transitionDuration}`,
-							}}
-						>
-							<BreadcrumbLink _hover={{ textDecoration: "none" }}>
-								<ReactRouterLink to={item.to}>{item.label}</ReactRouterLink>
-							</BreadcrumbLink>
-						</BreadcrumbItem>
-					);
-				})}
-			</Breadcrumb>
-		</Flex>
+						return (
+							<Breadcrumb.Item
+								key={index}
+								active={isCurrentPage}
+								style={{
+									fontWeight: isCurrentPage
+										? currentBreadcrumbFontWeight
+										: undefined,
+									color: isCurrentPage
+										? currentBreadcrumbColor
+										: breadcrumbColor,
+									cursor: "pointer",
+									transition: `color ${transitionDuration}`,
+									display: "flex",
+									alignItems: "center",
+									marginTop: "16px"
+								}}
+							>
+								<ReactRouterLink
+									to={item.to}
+									style={{
+										color: isCurrentPage
+											? currentBreadcrumbColor
+											: breadcrumbColor,
+									}}
+								>
+									{item.label}
+								</ReactRouterLink>
+							</Breadcrumb.Item>
+						);
+					})}
+				</Breadcrumb>
+				</Row>
+			</div>
+		</nav>
 	);
-}
+};
+
+export default Navigation;

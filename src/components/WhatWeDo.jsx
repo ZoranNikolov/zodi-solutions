@@ -1,10 +1,11 @@
-import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import React from "react";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import img from "../assets/images/workspace.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
-export default function WhatWeDo() {
+const WhatWeDo = () => {
 	const [ref, inView] = useInView({
 		triggerOnce: true,
 		threshold: 0.5,
@@ -16,84 +17,52 @@ export default function WhatWeDo() {
 	}, [inView]);
 
 	return (
-		<HStack
-			spacing="5px"
-			backgroundColor={"#dfe5f3"}
-			py={5}
-			style={{
-				display: "flex",
-				justifyContent: "center",
-			}}
-			width="100%"
-		>
-			<Box
-				ref={ref}
-				boxSize="sm"
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(-40%)",
-					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					opacity: inView ? 1 : 0,
-				}}
-			>
-				<Image
-					src={img}
-					borderRadius="xl"
-					maxH={300}
-					objectFit='cover'
-					alt="workspace"
-				/>
-			</Box>
-			<VStack width="60%" fontFamily={"sans-serif"} 
-			pl={50}
-			>
-				<Text
-					as={"h3"}
-					fontSize={"3xl"}
-					py={5}
-					fontWeight={"bold"}
-					textTransform={"uppercase"}
-					width="100%"
-					textAlign={"left"}
-				>
-					Какво правим?
-				</Text>
-				<VStack
-					width="100%"
-					alignItems="left"
-					fontSize={"md"}
-					fontWeight={"normal"}
-				>
-					<Text as={"p"}>
-						Зодисълюшънс е дигитална агенция, специализирана в изграждане на уеб
-						решения. Специализирали сме се в това да помагаме на компании в
-						страната да бъдат разпознаваеми в интернет пространството. За това
-						се стремим всеки уебсайт, който изработваме, да отговаря на
-						конкретните нужди.
-					</Text>
+		<Container fluid className="py-5 justify-content-center width-80">
+			<Row className="justify-content-center">
+				<Col lg="6" className="pr-5 justify-content-center">
+					<h3 className="font-weight-bold text-uppercase pb-5">
+						Какво правим?
+					</h3>
+					<div className="mb-3">
+						<p>
+							Зодисълюшънс е дигитална агенция, специализирана в изграждане на
+							уеб решения. Специализирали сме се в това да помагаме на компании
+							в страната да бъдат разпознаваеми в интернет пространството. За
+							това се стремим всеки уебсайт, който изработваме, да отговаря на
+							конкретните нужди.
+						</p>
+						<p>
+							Свържете се с нас, за да получите подробна информация за нашите
+							услуги.
+						</p>
+					</div>
 					<Link to={"/what-we-do"}>
-						<Button
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							p={5}
-							my={5}
-							w={"20%"}
-							bg={"#557373"}
-							_hover={{
-								bg: "#272401",
-								color: "#dfe5f3",
-								transform: "scale(1.05)",
-								transition: "all 0.325s ease-in-out",
-							}}
-						>
-							Научете повече
-						</Button>
+						<Button className="btn-lg btn-dark mt-4">Научете повече</Button>
 					</Link>
-				</VStack>
-			</VStack>
-		</HStack>
+				</Col>
+				<Col lg="6">
+					<div
+						ref={ref}
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							transform: inView ? "translateX(0)" : "translateX(40%)",
+							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
+							opacity: inView ? 1 : 0,
+						}}
+					>
+						<Image
+							src={img}
+							rounded
+							alt="the-future-is-here"
+							style={{ maxHeight: "300px", objectFit: "cover" }}
+						/>
+					</div>
+				</Col>
+			</Row>
+		</Container>
 	);
-}
+};
+
+export default WhatWeDo;

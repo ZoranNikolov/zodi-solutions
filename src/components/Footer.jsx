@@ -1,46 +1,32 @@
-import { Box, Flex, Text, Link, IconButton } from "@chakra-ui/react";
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
-export default function Footer() {
+const Footer = () => {
 	return (
-		<Box as="footer" py="6" bg="#0d0d0d" color="white">
-			<Flex justify="space-between" align="center" maxW="6xl" mx="auto">
-				<Text>&copy; 2023 ZODI90 Ltd. All rights reserved.</Text>
-				<Flex align="center">
-					<IconButton
-						as={Link}
-						href="#"
-						aria-label="Facebook"
-						icon={<FaFacebook />}
-						mr="2"
-						fontSize="20px"
-						variant="ghost"
-						color="whiteAlpha.700"
-						_hover={{ color: "whiteAlpha.900" }}
-					/>
-					<IconButton
-						as={Link}
-						href="#"
-						aria-label="Twitter"
-						icon={<FaTwitter />}
-						mr="2"
-						fontSize="20px"
-						variant="ghost"
-						color="whiteAlpha.700"
-						_hover={{ color: "whiteAlpha.900" }}
-					/>
-					<IconButton
-						as={Link}
-						href="#"
-						aria-label="Instagram"
-						icon={<FaInstagram />}
-						fontSize="20px"
-						variant="ghost"
-						color="whiteAlpha.700"
-						_hover={{ color: "whiteAlpha.900" }}
-					/>
-				</Flex>
-			</Flex>
-		</Box>
+		<footer className="py-6 bg-dark text-white">
+			<Container>
+				<Row className="justify-content-around align-items-center">
+					<Col className="justify-content-start mt-3">
+						<p>&copy; 2023 ZODI90 Ltd. All rights reserved.</p>
+					</Col>
+					<Col className="mt-3">
+						<div className="d-flex justify-content-end">
+							<a href="#" className="text-white me-2">
+								<FaFacebook fontSize="20px" />
+							</a>
+							<a href="#" className="text-white me-2">
+								<FaTwitter fontSize="20px" />
+							</a>
+							<a href="#" className="text-white">
+								<FaInstagram fontSize="20px" />
+							</a>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		</footer>
 	);
-}
+};
+
+export default Footer;
