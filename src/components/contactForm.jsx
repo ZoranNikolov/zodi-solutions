@@ -1,14 +1,6 @@
 import React, { useRef } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
-import {
-	Button,
-	FormControl,
-	FormLabel,
-	HStack,
-	Input,
-	Textarea,
-	VStack,
-} from "@chakra-ui/react";
 
 export default function ContactForm() {
 	const form = useRef();
@@ -39,92 +31,77 @@ export default function ContactForm() {
 	};
 
 	return (
-		<VStack
-			as="form"
-			ref={form}
-			onSubmit={sendEmail}
-			className="contact-form"
-			spacing={4}
-			align="stretch"
-			width="60%"
-		>
-			<HStack>
-				<FormControl>
-					{/* <FormLabel htmlFor="user_name">Your Name</FormLabel> */}
-					<Input
-						type="text"
-						id="firstName"
-						name="firstName"
-						placeholder="Име*"
-						variant="filled"
-						isRequired
-					/>
-				</FormControl>
-				<FormControl>
-					{/* <FormLabel htmlFor="user_name">Your Name</FormLabel> */}
-					<Input
-						type="text"
-						id="lastName"
-						name="lastName"
-						placeholder="Фамилия*"
-						variant="filled"
-						isRequired
-					/>
-				</FormControl>
-			</HStack>
+		<Container>
+			<Form
+				ref={form}
+				onSubmit={sendEmail}
+				className="contact-form"
+				style={{ maxWidth: "800px", margin: "0 auto" }}
+			>
+				<Row className="mb-3">
+					<Col>
+						<Form.Control
+							type="text"
+							id="firstName"
+							name="firstName"
+							placeholder="Име*"
+							required
+						/>
+					</Col>
+					<Col>
+						<Form.Control
+							type="text"
+							id="lastName"
+							name="lastName"
+							placeholder="Фамилия*"
+							required
+						/>
+					</Col>
+				</Row>
 
-			<HStack>
-				<FormControl>
-					{/* <FormLabel htmlFor="user_email">Email</FormLabel> */}
-					<Input
-						type="email"
-						id="userEmail"
-						name="userEmail"
-						placeholder="Email*"
-						variant="filled"
-						isRequired
-					/>
-				</FormControl>
+				<Row className="mb-3">
+					<Col>
+						<Form.Control
+							type="email"
+							id="userEmail"
+							name="userEmail"
+							placeholder="Email*"
+							required
+						/>
+					</Col>
+					<Col>
+						<Form.Control
+							type="tel"
+							id="userPhoneNumber"
+							name="userPhoneNumber"
+							placeholder="Телефон"
+							required
+						/>
+					</Col>
+				</Row>
 
-				<FormControl>
-					{/* <FormLabel htmlFor="user_email">Email</FormLabel> */}
-					<Input
-						type="tel"
-						id="userPhoneNumber"
-						name="userPhoneNumber"
-						placeholder="Телефон"
-						variant="filled"
-						isRequired
-					/>
-				</FormControl>
-			</HStack>
-
-			<FormControl>
-				{/* <FormLabel htmlFor="message">Message</FormLabel> */}
-				<Textarea
+				<Form.Control
+					as="textarea"
 					id="message"
 					name="message"
 					placeholder="Вашето съобщение"
-					variant="filled"
-					isRequired
+					required
+					className="mb-3"
 				/>
-			</FormControl>
 
-			<Button
-				type="submit"
-				bg={"#557373"}
-				fontSize={"md"}
-				_hover={{
-					bg: "#272401",
-					color: "#dfe5f3",
-					transform: "scale(1.05)",
-					transition: "all 0.325s ease-in-out",
-				}}
-				width="25%"
-				margin="0 auto"
-			>
-				Изпрати
-			</Button>
-		</VStack>
+				<Button
+					type="submit"
+					style={{
+						backgroundColor: "#557373",
+						border: "none",
+						width: "25%",
+						margin: "0 auto",
+					}}
+					className="mb-3"
+				>
+					Изпрати
+				</Button>
+			</Form>
+		</Container>
 	);
 }

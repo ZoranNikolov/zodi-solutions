@@ -21,9 +21,15 @@ code {
 .second-color {
 	background-color: #176677;
 }
+
+.width-25 {
+	width: 25%;
+}
+
 .width-60 {
 	width: 60%;
 }
+
 .width-80 {
 	width: 80%;
 }
