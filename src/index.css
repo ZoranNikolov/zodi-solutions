@@ -26,6 +26,30 @@ code {
 	width: 100%;
 }
 
-.margin-bottom-0{
-	margin-bottom: 0!important;
+.margin-bottom-0 {
+	margin-bottom: 0 !important;
+}
+
+button {
+	background-color: #58b399d3 !important;
+	outline: none;
+	transition: 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: #3b7a68 !important;
+	color: whitesmoke;
+	transform: scale(1.05);
+}
+
+nav {
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+	text-decoration: none;
 }

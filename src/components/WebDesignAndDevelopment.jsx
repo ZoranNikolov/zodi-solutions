@@ -1,9 +1,10 @@
-import { Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import img from "../assets/images/web-design.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
-export default function WebDesignAndDevelopment() {
+export default function WebSolutionsForYou() {
 	const [ref, inView] = useInView({
 		triggerOnce: true,
 		threshold: 0.5,
@@ -15,143 +16,46 @@ export default function WebDesignAndDevelopment() {
 	}, [inView]);
 
 	return (
-		<HStack
-			spacing="5px"
-			py={5}
-			style={{
-				display: "flex",
-				justifyContent: "center",
-			}}
-			width="100%"
-			gap={"25px"}
-			boxSizing="border-box"
-		>
-			<Box
-				ref={ref}
-				boxSize="sm"
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(-10%)",
-					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					opacity: inView ? 1 : 0,
-				}}
-				border={"1px"}
-				borderColor={"gray.400"}
-				width={"40%"}
-				height={"100%"}
-				mt={"50px"}
-				mb={"50px"}
-				borderRadius={"10px"}
-			>
-				<VStack
-					alignItems="center"
-					fontSize={"md"}
-					fontWeight={"normal"}
-					p={"30px"}
-					pl={0}
-					pr={0}
-					width="80%"
-				>
-					<Text
-						as={"h3"}
-						fontSize={"2xl"}
-						py={5}
-						fontWeight={"bold"}
-						textTransform={"uppercase"}
-						width="100%"
-						textAlign={"center"}
-					>
-						Дизайн и разработка на уебсайтове
-					</Text>
-					<Text as={"p"}>
-						Изготвяме уникален дизайн фокусиран върху Вашия бизнес.
-					</Text>
-					<Link to="/web-development">
-						<Button
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							p={5}
-							my={5}
-							w={"100%"}
-							bg={"#557373"}
-							_hover={{
-								bg: "#272401",
-								color: "#dfe5f3",
-								transform: "scale(1.05)",
-								transition: "all 0.325s ease-in-out",
-							}}
-						>
-							Разберете повече за дизайна и разработката
-						</Button>
+		<Container fluid className="py-5 justify-content-center">
+			<Row className="justify-content-center">
+				<Col lg="6" className="pr-5 justify-content-center">
+					<h3 className="font-weight-bold text-uppercase pb-5">
+						ДИЗАЙН И РАЗРАБОТКА НА УЕБСАЙТОВЕ
+					</h3>
+					<div className="mb-3">
+						<p>
+							С фокус върху индивидуалния подход към всеки проект, ние
+							съчетаваме висококачествен дизайн със съвременни технологии, за да
+							предоставим уеб решения, които не само изглеждат великолепно, но и
+							функционират перфектно. Нашата екипна страст и ангажираност към
+							вашата визия са ключът към създаването на успешни уеб проекти.
+						</p>
+					</div>
+					<Link to={"/web-solutions"}>
+						<button className="btn-lg mt-4">Научете повече</button>
 					</Link>
-				</VStack>
-			</Box>
-
-			<Box
-				ref={ref}
-				boxSize="sm"
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(10%)",
-					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					transitionDelay: "0.75s",
-					opacity: inView ? 1 : 0,
-				}}
-				border={"1px"}
-				borderColor={"gray.400"}
-				width={"40%"}
-				height={"100%"}
-				mt={"50px"}
-				mb={"50px"}
-				borderRadius={"10px"}
-			>
-				<VStack
-					width="80%"
-					alignItems="center"
-					fontSize={"md"}
-					fontWeight={"normal"}
-					p={"30px"}
-				>
-					<Text
-						as={"h3"}
-						fontSize={"2xl"}
-						py={5}
-						fontWeight={"bold"}
-						textTransform={"uppercase"}
-						width="100%"
-						textAlign={"center"}
+				</Col>
+				<Col lg="6">
+					<div
+						ref={ref}
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							// transform: inView ? "translateX(0)" : "translateX(40%)",
+							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
+							opacity: inView ? 1 : 0,
+						}}
 					>
-						Поддръжка на Вашия сайт
-					</Text>
-					<Text as={"p"}>
-						Грижим се за правилното функциониране на сайта Ви.
-					</Text>
-					<Link to="/web-support">
-						<Button
-							fontFamily={"sans-serif"}
-							fontSize={"md"}
-							p={5}
-							my={5}
-							w={"100%"}
-							bg={"#557373"}
-							_hover={{
-								bg: "#272401",
-								color: "#dfe5f3",
-								transform: "scale(1.05)",
-								transition: "all 0.325s ease-in-out",
-							}}
-						>
-							Разберете повече за поддръжката
-						</Button>
-					</Link>
-				</VStack>
-			</Box>
-		</HStack>
+						<Image
+							src={img}
+							rounded
+							alt="the-future-is-here"
+							style={{ maxHeight: "300px", objectFit: "cover" }}
+						/>
+					</div>
+				</Col>
+			</Row>
+		</Container>
 	);
 }

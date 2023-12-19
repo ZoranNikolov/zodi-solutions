@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import WebSolutionsForYou from "../components/WebSolutionsForYou";
 import WhatWeDo from "../components/WhatWeDo";
 import WebDesignAndDevelopment from "../components/WebDesignAndDevelopment";
@@ -29,9 +29,9 @@ const Home = () => {
 					</Row>
 					<Col>
 						<Link to="/contact-us">
-							<Button className="btn-lg btn-dark mt-4">
+							<button className="btn-lg mt-4">
 								Свържете се с нас
-							</Button>
+							</button>
 						</Link>
 					</Col>
 				</Row>
@@ -42,7 +42,7 @@ const Home = () => {
 			<Row className="mx-auto first-color px-0">
 				<WhatWeDo />
 			</Row>
-			<Row>
+			<Row className="mx-auto px-0 width-80">
 				<WebDesignAndDevelopment />
 			</Row>
 		</Container>

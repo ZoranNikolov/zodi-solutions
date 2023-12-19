@@ -55,7 +55,13 @@ const Navigation = () => {
 									transition: `color ${transitionDuration}`,
 									display: "flex",
 									alignItems: "center",
-									marginTop: "16px"
+									marginTop: "16px",
+									textDecoration: "none",
+									// Remove underline on hover
+									":hover": {
+										color: hoverTextColor,
+										textDecoration: "none",
+									},
 								}}
 							>
 								<ReactRouterLink
@@ -64,6 +70,8 @@ const Navigation = () => {
 										color: isCurrentPage
 											? currentBreadcrumbColor
 											: breadcrumbColor,
+										// Remove underline for the normal state
+										textDecoration: "none",
 									}}
 								>
 									{item.label}
@@ -77,5 +85,6 @@ const Navigation = () => {
 		</nav>
 	);
 };
+
 
 export default Navigation;

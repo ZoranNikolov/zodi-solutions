@@ -12,6 +12,7 @@ export default function WebSolutionsForYou() {
 
 	useEffect(() => {
 		if (inView) {
+			// Add any additional logic you want to run when the component is in view
 		}
 	}, [inView]);
 
@@ -24,19 +25,19 @@ export default function WebSolutionsForYou() {
 					</h3>
 					<div className="mb-3">
 						<p>
-							Зодисълюшънс е дигитална агенция, специализирана в изграждането на
-							уеб решения за Вашия бизнес. Ние подпомагаме компании в страната
-							чрез изграждане на персонализирани уебсайтове, които отговарят на
-							нуждите на бизнеса. Всеки сайт, който създаваме, е направен
-							специално за Вас, според Вашите изисквания.
-						</p>
-						<p>
-							Свържете се с нас, за да получите подробна информация за нашите
-							услуги.
+							Зодисълюшънс е вашето предпочитано място за иновативни уеб решения
+							и дигитален успех. Като специализирана дигитална агенция, ние сме
+							посветени на изграждането на уеб сайтове, които не само представят
+							вашия бизнес, но и го издигат на нови висоти в онлайн
+							пространството. Нашата мисия е да ви помогнем да бъдете
+							разпознавани в дигиталния свят, като създадем уеб присъствие,
+							което отговаря на уникалните ви нужди и цели.
 						</p>
 					</div>
 					<Link to={"/web-solutions"}>
-						<Button className="btn-lg btn-dark mt-4">Научете повече</Button>
+						<button className="btn-lg mt-4">
+							Научете повече
+						</button>
 					</Link>
 				</Col>
 				<Col lg="6">
@@ -46,7 +47,6 @@ export default function WebSolutionsForYou() {
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
-							transform: inView ? "translateX(0)" : "translateX(40%)",
 							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
 							opacity: inView ? 1 : 0,
 						}}
