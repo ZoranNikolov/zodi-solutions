@@ -1,96 +1,61 @@
-import { Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import img from "../assets/images/web-designer-office-working.jpg";
-import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
-export default function WhatWeDo() {
+const WhatWeDo = () => {
 	const [ref, inView] = useInView({
 		triggerOnce: true,
 		threshold: 0.5,
 	});
 
 	useEffect(() => {
-		if (inView) {
-		}
+		// Add any additional logic you want to run when the component is in view
 	}, [inView]);
 
 	return (
-		<HStack
-			spacing="5px"
-			py={5}
-			style={{
-				display: "flex",
-				justifyContent: "center",
-			}}
-			width="100%"
-		>
-			<Box
-				ref={ref}
-				boxSize="sm"
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					// Apply the animation class based on the 'inView' state
-					transform: inView ? "translateX(0)" : "translateX(-40%)",
-					transition: "transform 1s ease-in-out, opacity 1s ease-in-out", // Adjust the animation duration as needed
-					opacity: inView ? 1 : 0,
-				}}
-			>
-				<Image
-					src={img}
-					borderRadius="xl"
-					maxH={300}
-					maxW="100%"
-					objectFit="cover"
-					alt="workspace"
-				/>
-			</Box>
-			<VStack width="60%" fontFamily={"sans-serif"} pl={50}>
-				<Text
-					as={"h3"}
-					fontSize={"3xl"}
-					py={5}
-					fontWeight={"bold"}
-					textTransform={"uppercase"}
-					width="100%"
-					textAlign={"left"}
-				>
-					Нашите сайтове са персонални
-				</Text>
-				<VStack
-					width="100%"
-					alignItems="left"
-					fontSize={"md"}
-					fontWeight={"normal"}
-				>
-					<Text as={"p"}>
+		<Container fluid className="py-5 width-80">
+			<Row className="justify-content-center">
+				<Col lg="6" className="pr-5 justify-content-center">
+					<h3 className="font-weight-bold text-uppercase pt-3">
+						Нашите сайтове са персонални
+					</h3>
+					<p>
 						Точно както Вие не искате да изглеждате и звучите като всеки друг
 						бизнес, ние не вярваме в шаблонните решения. Има много начини за
 						проектирате и изграждане на невероятен, уникален сайт, който да
 						постигне целите Ви. Ние ще работим в тясно сътрудничество с Вас, за
 						да намерим най-доброто решение, което отговаря на нуждите Ви и е в
-						рамките на Вашия бюджет.{" "}
-					</Text>
-					
-					<Button
-						fontFamily={"sans-serif"}
-						fontSize={"md"}
-						p={5}
-						my={5}
-						w={"20%"}
-						bg={"#557373"}
-						_hover={{
-							bg: "#272401",
-							color: "#dfe5f3",
-							transform: "scale(1.05)",
-							transition: "all 0.325s ease-in-out",
+						рамките на Вашия бюджет.
+					</p>
+					<Link to={"/web-solutions"}>
+						<button className="btn-lg mt-4">Научете повече</button>
+					</Link>
+				</Col>
+				<Col lg="6">
+					<div
+						ref={ref}
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							transform: inView ? "translateX(0)" : "translateX(40%)",
+							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
+							opacity: inView ? 1 : 0,
 						}}
 					>
-						Научете повече
-					</Button>
-				</VStack>
-			</VStack>
-		</HStack>
+						<Image
+							src={img}
+							rounded
+							alt="the-future-is-here"
+							style={{ maxHeight: "300px", objectFit: "cover" }}
+						/>
+					</div>
+				</Col>
+			</Row>
+		</Container>
 	);
-}
+};
+
+export default WhatWeDo;
