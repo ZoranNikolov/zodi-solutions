@@ -24,7 +24,7 @@ const WeDoTheWork = () => {
 						които ще работят по изграждането на вашия уебсайт. Ние сме малък
 						екип, който работи директно с нашите клиенти по техните текущи нужди.
 					</p>
-					<Link to={"/web-solutions"}>
+					<Link to={"/personal-contact"}>
 					<button className="btn-lg mt-4">
 							Научете повече
 						</button>

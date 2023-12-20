@@ -7,6 +7,8 @@ import About from "./pages/about";
 import ContactUs from "./pages/contactUs";
 import WebSolutions from "./pages/webSolutions";
 import WhatWeDo from "./pages/whatWeDo";
+import WebDesign from "./pages/webDesign";
+import PersonalContact from "./pages/personalContact";
 
 function App() {
 	return (
@@ -18,6 +20,8 @@ function App() {
 				<Route path="/contact-us" element={<ContactUs />} />
 				<Route path="/web-solutions" element={<WebSolutions />} />
 				<Route path="/what-we-do" element={<WhatWeDo />} />
+				<Route path="/web-design" element={<WebDesign />} />
+				<Route path="/personal-contact" element={<PersonalContact />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>

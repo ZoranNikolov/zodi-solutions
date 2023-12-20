@@ -31,7 +31,7 @@ export default function WebSolutionsForYou() {
 							вашата визия са ключът към създаването на успешни уеб проекти.
 						</p>
 					</div>
-					<Link to={"/web-solutions"}>
+					<Link to={"/web-design"}>
 						<button className="btn-lg mt-4">Научете повече</button>
 					</Link>
 				</Col>

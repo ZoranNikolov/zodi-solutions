@@ -32,11 +32,7 @@ export default function ContactForm() {
 
 	return (
 		<Container className="px-0">
-			<Form
-				ref={form}
-				onSubmit={sendEmail}
-				className="contact-form px-0"
-			>
+			<Form ref={form} onSubmit={sendEmail} className="contact-form px-0">
 				<Row className="mb-3">
 					<Col>
 						<Form.Control
@@ -89,18 +85,9 @@ export default function ContactForm() {
 					style={{ minHeight: "100px" }}
 				/>
 
-				<Button
-					type="submit"
-					style={{
-						backgroundColor: "#557373",
-						border: "none",
-						width: "25%",
-						margin: "0 auto",
-					}}
-					className="mb-3"
-				>
+				<button type="submit" className="btn-lg mt-1">
 					Изпрати
-				</Button>
+				</button>
 			</Form>
 		</Container>
 	);
