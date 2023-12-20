@@ -50,12 +50,12 @@ export default function ContactUs() {
 
 			<Container
 				fluid
-				className="d-flex justify-content-center align-items-center pb-5"
+				className="d-flex justify-content-center align-items-center py-4 width-60"
 			>
 				<ContactForm />
 			</Container>
 
-			<Container fluid className="pb-5">
+			<Container fluid className="pb-4">
 				<Row className="justify-content-center">
 					<Col md="8">
 						<p>

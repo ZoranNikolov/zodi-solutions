@@ -31,12 +31,11 @@ export default function ContactForm() {
 	};
 
 	return (
-		<Container>
+		<Container className="px-0">
 			<Form
 				ref={form}
 				onSubmit={sendEmail}
-				className="contact-form"
-				style={{ maxWidth: "800px", margin: "0 auto" }}
+				className="contact-form px-0"
 			>
 				<Row className="mb-3">
 					<Col>
@@ -87,6 +86,7 @@ export default function ContactForm() {
 					placeholder="Вашето съобщение"
 					required
 					className="mb-3"
+					style={{ minHeight: "100px" }}
 				/>
 
 				<Button
