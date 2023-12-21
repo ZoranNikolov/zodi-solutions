@@ -1,4 +1,18 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+/* @font-face {
+	font-family: Kurale;
+	src: url("../src/assets/fonts/kurale-regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Alice;
+	src: url("../src/assets/fonts/Alice-Regular.ttf") format("opentype");
+} */
+
+@font-face {
+	font-family: Fira;
+	src: url("../src/assets/fonts/FiraCode-Regular.otf"), url("../src/assets/fonts/FiraCode-Bold.otf");
+}
 
 body {
 	margin: 0;
@@ -9,9 +23,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+body {
+	font-family: "Fira";
 }
 
 .first-color {
@@ -45,6 +58,7 @@ code {
 button {
 	background-color: #58b399d3 !important;
 	outline: none;
+	border: none;
 	transition: 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 

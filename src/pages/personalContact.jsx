@@ -71,10 +71,11 @@ export default function PersonalContact() {
 						просто клиент, а партньор, с когото да сътрудничим за дългосрочен
 						успех и устойчив растеж в онлайн средата.
 					</p>
-
-					<Link to={"/contact-us"}>
-						<button className="btn-lg my-2">Свържете се с нас</button>
-					</Link>
+					<div className="d-flex justify-content-center mt-4">
+						<Link to={"/contact-us"}>
+							<button className="btn-lg my-2">Свържете се с нас</button>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
