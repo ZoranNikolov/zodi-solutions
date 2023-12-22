@@ -32,7 +32,7 @@ const WeDoItRight = () => {
 						Свържете се с нас, за да получите подробна информация за нашите
 						услуги.
 					</p>
-					<Link to={"/web-solutions"}>
+					<Link to={"/we-know-what-we-do"}>
 						<button className="btn-lg mt-4">Научете повече</button>
 					</Link>
 				</Col>

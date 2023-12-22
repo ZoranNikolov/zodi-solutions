@@ -1,4 +1,4 @@
-import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import img from "../assets/images/web-design.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";

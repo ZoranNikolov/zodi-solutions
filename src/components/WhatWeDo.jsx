@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import img from "../assets/images/workspace.jpg";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";

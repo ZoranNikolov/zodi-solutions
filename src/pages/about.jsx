@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import WeDoTheWork from "../components/WeDoTheWork";
@@ -10,7 +10,7 @@ export default function About() {
 
 	return (
 		<>
-			<Container fluid className="second-color text-white py-5">
+			<Container fluid className="second-color text-white py-5 pb-4">
 				<Row className="justify-content-center mt-5">
 					<Col md="8">
 						<h2 className="font-size-5xl text-center pt-3">

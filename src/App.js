@@ -9,6 +9,8 @@ import WebSolutions from "./pages/webSolutions";
 import WhatWeDo from "./pages/whatWeDo";
 import WebDesign from "./pages/webDesign";
 import PersonalContact from "./pages/personalContact";
+import CustomWebsites from "./pages/customWebsites";
+import WeKnowWhatWeDo from "./pages/weKnowWhatWeDo";
 
 function App() {
 	return (
@@ -22,6 +24,8 @@ function App() {
 				<Route path="/what-we-do" element={<WhatWeDo />} />
 				<Route path="/web-design" element={<WebDesign />} />
 				<Route path="/personal-contact" element={<PersonalContact />} />
+				<Route path="/custom-websites" element={<CustomWebsites />} />
+				<Route path="/we-know-what-we-do" element={<WeKnowWhatWeDo />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>

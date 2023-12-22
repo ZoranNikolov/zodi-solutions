@@ -29,7 +29,7 @@ const WhatWeDo = () => {
 						да намерим най-доброто решение, което отговаря на нуждите Ви и е в
 						рамките на Вашия бюджет.
 					</p>
-					<Link to={"/web-solutions"}>
+					<Link to={"/custom-websites"}>
 						<button className="btn-lg mt-4">Научете повече</button>
 					</Link>
 				</Col>
