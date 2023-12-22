@@ -18,7 +18,7 @@ const WeDoTheWork = () => {
 		<Container fluid className="py-5 width-80">
 			<Row className="justify-content-center">
 				<Col lg="6" className="pr-5 justify-content-center">
-					<h3 className="font-weight-bold text-uppercase pt-3">Личен контакт</h3>
+					<h3 className="font-weight-bold text-uppercase pt-3 pb-4 mb-0">Личен контакт</h3>
 					<p>
 						Когато се свържете с нас, същите хора, с които разговаряте, са тези,
 						които ще работят по изграждането на вашия уебсайт. Ние сме малък
@@ -37,7 +37,6 @@ const WeDoTheWork = () => {
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
-							transform: inView ? "translateX(0)" : "translateX(40%)",
 							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
 							opacity: inView ? 1 : 0,
 						}}

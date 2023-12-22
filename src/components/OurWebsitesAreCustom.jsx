@@ -18,7 +18,7 @@ const WhatWeDo = () => {
 		<Container fluid className="py-5 width-80">
 			<Row className="justify-content-center">
 				<Col lg="6" className="pr-5 justify-content-center">
-					<h3 className="font-weight-bold text-uppercase pt-3">
+					<h3 className="font-weight-bold text-uppercase pt-3 pb-4 mb-0">
 						Нашите сайтове са персонални
 					</h3>
 					<p>
@@ -40,7 +40,6 @@ const WhatWeDo = () => {
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
-							transform: inView ? "translateX(0)" : "translateX(40%)",
 							transition: "transform 1s ease-in-out, opacity 1s ease-in-out",
 							opacity: inView ? 1 : 0,
 						}}

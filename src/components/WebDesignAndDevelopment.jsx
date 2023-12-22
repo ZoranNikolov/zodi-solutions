@@ -19,7 +19,7 @@ export default function WebSolutionsForYou() {
 		<Container fluid className="py-5 justify-content-center">
 			<Row className="justify-content-center">
 				<Col lg="6" className="pr-5 justify-content-center">
-					<h3 className="font-weight-bold text-uppercase pb-5">
+					<h3 className="font-weight-bold text-uppercase pb-4 mb-0">
 						ДИЗАЙН И РАЗРАБОТКА НА УЕБСАЙТОВЕ
 					</h3>
 					<div className="mb-3">
