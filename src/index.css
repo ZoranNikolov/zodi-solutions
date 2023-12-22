@@ -1,17 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-/* @font-face {
-	font-family: Kurale;
-	src: url("../src/assets/fonts/kurale-regular.otf") format("opentype");
-}
 
 @font-face {
-	font-family: Alice;
-	src: url("../src/assets/fonts/Alice-Regular.ttf") format("opentype");
-} */
-
-@font-face {
-	font-family: Fira;
-	src: url("../src/assets/fonts/FiraCode-Regular.otf"), url("../src/assets/fonts/FiraCode-Bold.otf");
+	font-family: Blogger;
+	src: url("../src/assets/fonts/Blogger_Sans.otf"), url("../src/assets/fonts/Blogger_Sans-Bold.otf");
 }
 
 body {
@@ -24,7 +15,7 @@ body {
 }
 
 body {
-	font-family: "Fira";
+	font-family: "Blogger";
 }
 
 .first-color {
@@ -82,4 +73,16 @@ a {
 
 h2 {
 	font-weight: bold;
+}
+
+p {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.2em;
 }
