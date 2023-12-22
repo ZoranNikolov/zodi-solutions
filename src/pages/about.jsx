@@ -13,7 +13,7 @@ export default function About() {
 			<Container fluid className="second-color text-white py-5">
 				<Row className="justify-content-center mt-5">
 					<Col md="8">
-						<h2 className="font-family-sans-serif font-size-5xl text-center pt-3">
+						<h2 className="font-size-5xl text-center pt-3">
 							Защо да изберете нас
 						</h2>
 					</Col>
