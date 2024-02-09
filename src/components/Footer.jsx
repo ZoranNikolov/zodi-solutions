@@ -10,7 +10,7 @@ const Footer = () => {
 					<Col className="justify-content-center mt-3">
 						<Row className="justify-content-center">
 							<Col>
-						<p className="text-align-center">&copy; 2023 ZODI90 Ltd. All rights reserved.</p>
+						<p className="text-align-center">&copy; 2024 ZODI90 Ltd. All rights reserved.</p>
 							</Col>
 						</Row>
 					</Col>

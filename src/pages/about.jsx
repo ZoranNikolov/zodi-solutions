@@ -4,6 +4,7 @@ import { useState } from "react";
 import WeDoTheWork from "../components/WeDoTheWork";
 import OurWebsitesAreCustom from "../components/OurWebsitesAreCustom";
 import WeDoItRight from "../components/WeDoItRight";
+import { Helmet } from "react-helmet";
 
 export default function About() {
 	const [animateWebSolutions, setAnimateWebSolutions] = useState(false);
@@ -11,6 +12,10 @@ export default function About() {
 	return (
 		<>
 			<Container fluid className="second-color text-white py-5 pb-4">
+			<Helmet>
+			<title>Информация за екипа ни</title>
+				<meta name="description" content="Научете повече за нашие якип."/>
+			</Helmet>
 				<Row className="justify-content-center mt-5">
 					<Col md="8">
 						<h2 className="font-size-5xl text-center pt-3">

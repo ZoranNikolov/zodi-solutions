@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 export default function WeKnowWhatWeDo() {
@@ -9,6 +9,13 @@ export default function WeKnowWhatWeDo() {
 				<h2 className="font-weight-bold text-uppercase py-3">
 					Знаем какво правим
 				</h2>
+				<Helmet>
+					<title>Знаем какво правим</title>
+					<meta
+						name="description"
+						content="Всяко едно наше действие и доработка по сайт е добре обмислено и съобразено с нуждите на клиента и модерните решения в областта на уеб разработката."
+					/>
+				</Helmet>
 				<div className="text-left justify-content-center">
 					<p>
 						В Зодисълюшънс не създаваме просто уебсайтове – ние владеем

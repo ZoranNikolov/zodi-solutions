@@ -5,6 +5,13 @@ export default function ContactUs() {
 	return (
 		<>
 			<Container fluid className="second-color text-white py-5 mb-5 pb-4">
+			<Helmet>
+					<title>Пишете ни</title>
+					<meta
+						name="description"
+						content="Свържете се нас, за да направим присъствието Ви в интернет пространството значимо и успешно."
+					/>
+				</Helmet>
 				<Row className="justify-content-center mt-5">
 					<Col md="8">
 						<h2 className="font-family-sans-serif font-size-5xl text-center pt-3">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 export default function CustomWebsites() {
@@ -9,6 +10,13 @@ export default function CustomWebsites() {
 				<h2 className="font-weight-bold text-uppercase py-3">
 					Нашите уебсайтове са персонални
 				</h2>
+				<Helmet>
+					<title>Персонални уебсайтове</title>
+					<meta
+						name="description"
+						content="Нашите уебсайтове са персонализирани според нуждите на всеки клиент."
+					/>
+				</Helmet>
 				<div className="text-left justify-content-center">
 					<p>
 						В Зодисълюшънс съчетаваме стил и функционалност, за да създадем

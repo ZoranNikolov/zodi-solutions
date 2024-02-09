@@ -35,7 +35,7 @@ const Navigation = () => {
 				<Row>
 				<Breadcrumb
 					className="navbar-nav margin-bottom-0"
-					separator={<ChevronRight color="gray.500" />}
+					separator={<ChevronRight />}
 				>
 					{navigationItems.map((item, index) => {
 						const isCurrentPage = item.to === location.pathname;

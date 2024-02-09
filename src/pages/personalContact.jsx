@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 export default function PersonalContact() {
@@ -6,6 +7,13 @@ export default function PersonalContact() {
 		<div className="d-flex justify-content-center py-5">
 			<div className="width-60 pt-5">
 				<h2 className="font-weight-bold text-uppercase py-3">Личен контакт</h2>
+				<Helmet>
+					<title>Личен контакт</title>
+					<meta
+						name="description"
+						content="Личен контакт като оптимална форма на комуникация."
+					/>
+				</Helmet>
 				<div className="text-left justify-content-center">
 					<p>
 						При нас ще откриеш екип от професионалисти, които не само разбират

@@ -11,11 +11,17 @@ import WebDesign from "./pages/webDesign";
 import PersonalContact from "./pages/personalContact";
 import CustomWebsites from "./pages/customWebsites";
 import WeKnowWhatWeDo from "./pages/weKnowWhatWeDo";
+import { Helmet } from "react-helmet";
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Navigation />
+			<Helmet>
+			<title>Изработка на Уеб Сайтове</title>
+				<meta name="description" content="Израбтока на персонализирани уеб решения и сайтове."/>
+				<meta name="keywords" content="Сайт, Уеб, Интернет присъствие"/>
+			</Helmet>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
