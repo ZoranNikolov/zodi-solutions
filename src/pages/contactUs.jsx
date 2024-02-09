@@ -1,5 +1,6 @@
 import { Col, Container, ListGroup, Row } from "react-bootstrap";
 import ContactForm from "../components/contactForm";
+import { Helmet } from "react-helmet";
 
 export default function ContactUs() {
 	return (
